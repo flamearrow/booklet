@@ -36,19 +36,16 @@ class BookInfoTableViewCell: UITableViewCell {
             createdAt.text = book.createdAt
             author.text = book.author
             
-            if let bookUrl = book.coverImageUrl{
-            if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
-                self.bookCover?.image = UIImage(data: imageData as Data)
+            if let bookUrl = book.coverImageUrl {
+                DispatchQueue.global(qos: .userInteractive).async {
+                    if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
+                        // set image back on main queue, otherwise it won't be set until you click it
+                        DispatchQueue.main.async {
+                            self.bookCover?.image = UIImage(data: imageData as Data)
+                        }
+                    }
+                }
             }
-            }
-            
-            //if let bookUrl = book.coverImageUrl {
-             //   DispatchQueue.global(qos: .userInteractive).async {
-              //      if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
-              //          self.bookCover?.image = UIImage(data: imageData as Data)
-              //      }
-               // }
-            //}
         }
     }
     override func awakeFromNib() {
