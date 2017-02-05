@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		223286C31E469C7600425446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286C21E469C7600425446 /* AppDelegate.swift */; };
-		223286C51E469C7600425446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286C41E469C7600425446 /* ViewController.swift */; };
 		223286C81E469C7600425446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223286C61E469C7600425446 /* Main.storyboard */; };
 		223286CA1E469C7600425446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223286C91E469C7600425446 /* Assets.xcassets */; };
 		223286CD1E469C7600425446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223286CB1E469C7600425446 /* LaunchScreen.storyboard */; };
+		223286DB1E46AC1D00425446 /* BookInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286DA1E46AC1D00425446 /* BookInfoTableViewCell.swift */; };
+		223286DD1E46AC6900425446 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286DC1E46AC6900425446 /* DiscoverViewController.swift */; };
+		223286DF1E46ADBD00425446 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286DE1E46ADBD00425446 /* Book.swift */; };
+		223286E11E46B6AF00425446 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286E01E46B6AF00425446 /* Constants.swift */; };
+		223286E41E46B91F00425446 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286E31E46B91F00425446 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		223286BF1E469C7600425446 /* Booklet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booklet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223286C21E469C7600425446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		223286C41E469C7600425446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		223286C71E469C7600425446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		223286C91E469C7600425446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223286CC1E469C7600425446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		223286CE1E469C7600425446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		223286DA1E46AC1D00425446 /* BookInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoTableViewCell.swift; sourceTree = "<group>"; };
+		223286DC1E46AC6900425446 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		223286DE1E46ADBD00425446 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		223286E01E46B6AF00425446 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		223286E31E46B91F00425446 /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		223286C11E469C7600425446 /* Booklet */ = {
 			isa = PBXGroup;
 			children = (
-				223286C21E469C7600425446 /* AppDelegate.swift */,
-				223286C41E469C7600425446 /* ViewController.swift */,
+				223286D51E46A4E600425446 /* model */,
+				223286D41E46A4D400425446 /* support */,
 				223286C61E469C7600425446 /* Main.storyboard */,
+				223286E21E46B90A00425446 /* view */,
+				223286E01E46B6AF00425446 /* Constants.swift */,
+				223286E31E46B91F00425446 /* Debug.swift */,
+			);
+			path = Booklet;
+			sourceTree = "<group>";
+		};
+		223286D41E46A4D400425446 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				223286C21E469C7600425446 /* AppDelegate.swift */,
 				223286C91E469C7600425446 /* Assets.xcassets */,
 				223286CB1E469C7600425446 /* LaunchScreen.storyboard */,
 				223286CE1E469C7600425446 /* Info.plist */,
 			);
-			path = Booklet;
+			name = support;
+			sourceTree = "<group>";
+		};
+		223286D51E46A4E600425446 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				223286DE1E46ADBD00425446 /* Book.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		223286E21E46B90A00425446 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				223286DC1E46AC6900425446 /* DiscoverViewController.swift */,
+				223286DA1E46AC1D00425446 /* BookInfoTableViewCell.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223286C51E469C7600425446 /* ViewController.swift in Sources */,
+				223286E11E46B6AF00425446 /* Constants.swift in Sources */,
+				223286E41E46B91F00425446 /* Debug.swift in Sources */,
+				223286DF1E46ADBD00425446 /* Book.swift in Sources */,
+				223286DD1E46AC6900425446 /* DiscoverViewController.swift in Sources */,
 				223286C31E469C7600425446 /* AppDelegate.swift in Sources */,
+				223286DB1E46AC1D00425446 /* BookInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +342,7 @@
 				223286D31E469C7600425446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
