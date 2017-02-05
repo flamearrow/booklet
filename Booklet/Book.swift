@@ -13,7 +13,7 @@ public struct Book {
     public let author:String!
     public let bookDescription:String!
     public let coverImageUrl:String!
-    public let createdAt:NSDate!
+    public let createdAt:String!
     
     // extend strings to convert string to values
     init(data:[String:String]) {
@@ -21,17 +21,28 @@ public struct Book {
         author = data[Constants.Author]
         bookDescription = data[Constants.Description]
         coverImageUrl = data[Constants.Cover]
-        createdAt = data[Constants.CreatedAt]?.toNsDate
+        createdAt = data[Constants.CreatedAt]?.toDateString
     }
 }
 
 extension String {
     var toNsDate:NSDate? {
         get {
+            return NSDate(timeIntervalSince1970: (self as NSString).doubleValue)
+            // let dateFormatter = DateFormatter()
+            // dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+            // dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+            // return dateFormatter.date(from: self) as NSDate?
+        }
+    }
+    
+    var toDateString:String? {
+        get {
             let dateFormatter = DateFormatter()
             dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
-            dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
-            return dateFormatter.date(from: self) as NSDate?
+            // dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+            dateFormatter.dateFormat = "MMM dd yyyy"
+            return dateFormatter.string(from: toNsDate! as Date)
         }
     }
 }

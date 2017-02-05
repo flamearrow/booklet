@@ -15,12 +15,11 @@ class BookInfoTableViewCell: UITableViewCell {
             updateUI()
         }
     }
-    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var createdAt: UILabel!
     @IBOutlet weak var bookCover: UIImageView!
-    @IBOutlet weak var title: UITextField!
     @IBOutlet weak var bookDescription: UITextView!
-    @IBOutlet weak var createdAt: UITextField!
-    @IBOutlet weak var author: UITextField!
 
     private func updateUI() {
         bookCover?.image = nil
@@ -34,15 +33,22 @@ class BookInfoTableViewCell: UITableViewCell {
             title.text = book.title
             bookDescription.text = book.bookDescription
             // this is formatted
-            createdAt.text = book.createdAt.description
+            createdAt.text = book.createdAt
             author.text = book.author
-            if let bookUrl = book.coverImageUrl {
-                DispatchQueue.global(qos: .userInteractive).async {
-                    if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
-                        self.bookCover?.image = UIImage(data: imageData as Data)
-                    }
-                }
+            
+            if let bookUrl = book.coverImageUrl{
+            if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
+                self.bookCover?.image = UIImage(data: imageData as Data)
             }
+            }
+            
+            //if let bookUrl = book.coverImageUrl {
+             //   DispatchQueue.global(qos: .userInteractive).async {
+              //      if let imageData = NSData(contentsOf: URL(string: bookUrl)!) {
+              //          self.bookCover?.image = UIImage(data: imageData as Data)
+              //      }
+               // }
+            //}
         }
     }
     override func awakeFromNib() {
