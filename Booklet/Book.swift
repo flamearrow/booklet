@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Book {
+public class Book {
     public let title:String!
     public let author:String!
     public let bookDescription:String!

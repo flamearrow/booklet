@@ -16,12 +16,12 @@ class DiscoverViewController: UITableViewController {
         }
     }
 
-    @IBAction func clickMe(_ sender: UIButton) {
-        books = Debug.createDebugBooks()
-        
+    @IBAction func goToGrid(_ sender: UIButton) {
+        doGoGrid()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        books = Debug.createDebugBooks()
      }
 
     override func didReceiveMemoryWarning() {

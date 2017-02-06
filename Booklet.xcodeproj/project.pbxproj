@@ -16,6 +16,11 @@
 		223286DF1E46ADBD00425446 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286DE1E46ADBD00425446 /* Book.swift */; };
 		223286E11E46B6AF00425446 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286E01E46B6AF00425446 /* Constants.swift */; };
 		223286E41E46B91F00425446 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223286E31E46B91F00425446 /* Debug.swift */; };
+		22FF5DE11E47F353008CF29D /* DiscoveryGrid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF5DE01E47F353008CF29D /* DiscoveryGrid.storyboard */; };
+		22FF5DE31E47F46D008CF29D /* DiscoveryGridViewControllerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5DE21E47F46D008CF29D /* DiscoveryGridViewControllerCollectionViewController.swift */; };
+		22FF5DE71E47F82A008CF29D /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5DE61E47F82A008CF29D /* DiscoverCollectionViewCell.swift */; };
+		22FF5DE91E47FE5D008CF29D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF5DE81E47FE5D008CF29D /* WelcomeViewController.swift */; };
+		22FF5DEB1E48010D008CF29D /* BookList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF5DEA1E48010D008CF29D /* BookList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		223286DE1E46ADBD00425446 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		223286E01E46B6AF00425446 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		223286E31E46B91F00425446 /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		22FF5DE01E47F353008CF29D /* DiscoveryGrid.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiscoveryGrid.storyboard; sourceTree = "<group>"; };
+		22FF5DE21E47F46D008CF29D /* DiscoveryGridViewControllerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewControllerCollectionViewController.swift; sourceTree = "<group>"; };
+		22FF5DE61E47F82A008CF29D /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		22FF5DE81E47FE5D008CF29D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		22FF5DEA1E48010D008CF29D /* BookList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +74,6 @@
 			children = (
 				223286D51E46A4E600425446 /* model */,
 				223286D41E46A4D400425446 /* support */,
-				223286C61E469C7600425446 /* Main.storyboard */,
 				223286E21E46B90A00425446 /* view */,
 				223286E01E46B6AF00425446 /* Constants.swift */,
 				223286E31E46B91F00425446 /* Debug.swift */,
@@ -94,10 +103,40 @@
 		223286E21E46B90A00425446 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				223286DC1E46AC6900425446 /* DiscoverViewController.swift */,
-				223286DA1E46AC1D00425446 /* BookInfoTableViewCell.swift */,
+				22FF5DEC1E482127008CF29D /* welcome */,
+				22FF5DE41E47F7CA008CF29D /* bookInfoList */,
+				22FF5DE51E47F7D9008CF29D /* discoverGrid */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		22FF5DE41E47F7CA008CF29D /* bookInfoList */ = {
+			isa = PBXGroup;
+			children = (
+				223286DC1E46AC6900425446 /* DiscoverViewController.swift */,
+				223286DA1E46AC1D00425446 /* BookInfoTableViewCell.swift */,
+				22FF5DEA1E48010D008CF29D /* BookList.storyboard */,
+			);
+			name = bookInfoList;
+			sourceTree = "<group>";
+		};
+		22FF5DE51E47F7D9008CF29D /* discoverGrid */ = {
+			isa = PBXGroup;
+			children = (
+				22FF5DE01E47F353008CF29D /* DiscoveryGrid.storyboard */,
+				22FF5DE21E47F46D008CF29D /* DiscoveryGridViewControllerCollectionViewController.swift */,
+				22FF5DE61E47F82A008CF29D /* DiscoverCollectionViewCell.swift */,
+			);
+			name = discoverGrid;
+			sourceTree = "<group>";
+		};
+		22FF5DEC1E482127008CF29D /* welcome */ = {
+			isa = PBXGroup;
+			children = (
+				223286C61E469C7600425446 /* Main.storyboard */,
+				22FF5DE81E47FE5D008CF29D /* WelcomeViewController.swift */,
+			);
+			name = welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FF5DEB1E48010D008CF29D /* BookList.storyboard in Resources */,
 				223286CD1E469C7600425446 /* LaunchScreen.storyboard in Resources */,
+				22FF5DE11E47F353008CF29D /* DiscoveryGrid.storyboard in Resources */,
 				223286CA1E469C7600425446 /* Assets.xcassets in Resources */,
 				223286C81E469C7600425446 /* Main.storyboard in Resources */,
 			);
@@ -173,9 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FF5DE91E47FE5D008CF29D /* WelcomeViewController.swift in Sources */,
 				223286E11E46B6AF00425446 /* Constants.swift in Sources */,
 				223286E41E46B91F00425446 /* Debug.swift in Sources */,
+				22FF5DE71E47F82A008CF29D /* DiscoverCollectionViewCell.swift in Sources */,
 				223286DF1E46ADBD00425446 /* Book.swift in Sources */,
+				22FF5DE31E47F46D008CF29D /* DiscoveryGridViewControllerCollectionViewController.swift in Sources */,
 				223286DD1E46AC6900425446 /* DiscoverViewController.swift in Sources */,
 				223286C31E469C7600425446 /* AppDelegate.swift in Sources */,
 				223286DB1E46AC1D00425446 /* BookInfoTableViewCell.swift in Sources */,
