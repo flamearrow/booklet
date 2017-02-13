@@ -1,7 +1,7 @@
 //
 //  Book.swift
 //  Booklet
-//
+//  Meta info for a Book
 //  Created by Chen Cen on 2/4/17.
 //  Copyright © 2017 Chen Cen. All rights reserved.
 //
